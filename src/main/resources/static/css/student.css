@@ -1,0 +1,33 @@
+.front{
+    background-color: red;
+}
+.styled-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 1000px;
+    margin-left: 10rem;
+    background-color: #ffffff;
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.body button{
+    margin-left: 100rem;
+    background-color: red;
+    color: red;
+    font-size: 50px;
+}
+
+
+
+

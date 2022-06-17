@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duzelis Et</title>
+    <link th:href="@{/css/create.css}" rel="stylesheet">
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="onesection">
+            <div class="formbx">
+                <form action="#" th:action="@{/update/{id}(id=${student.id})}" th:object="${student}" method="POST">
+                    <h2>Hesabda deyisiklik et</h2>
+                    <input type="text" placeholder="Ad" th:field="*{Name}"/>
+                    <input type="text" placeholder="Soyad" th:field="*{Surname}"/></p>
+                    <input type="text" placeholder="Sinif" th:field="*{Class_Name}"/></p>
+                    <input type="text" placeholder="Ortalama" th:field="*{Avg}"/></p>
+                    <input type="date" placeholder="Dogum-tarixi" th:field="*{Birth_Date}"/></p>
+                    <p>
+                        <input type="submit" value="tamamla">
+                    </p>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+</body>
+</html>

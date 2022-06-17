@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<html xmlns:th =" http://www.thymeleaf.org ">
+<head>
+  <meta charset="utf-8" />
+  <title>QEYDIYYAT</title>
+  <link th:href="@{/css/create.css}" rel="stylesheet">
+
+</head>
+<body>
+<section>
+  <div class="container">
+    <div class="onesection">
+      <div class="formbx">
+        <form action="#" th:action="@{create}" th:object="${student}" method="POST">
+          <h2>Yeni tələbə əlavə et</h2>
+          <input type="text" placeholder="Ad" th:field="*{Name}"/>
+          <input type="text" placeholder="Soyad" th:field="*{Surname}"/></p>
+          <input type="text" placeholder="Qrup" th:field="*{Class_Name}"/></p>
+          <input type="text" placeholder="Ortalama" th:field="*{Avg}"/></p>
+          <input type="date" placeholder="Dogum-tarixi" th:field="*{Birth_Date}"/></p>
+          <p>
+            <input type="submit" value="Qeydiyyati Tamamla">
+          </p>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+</body>
+</html>

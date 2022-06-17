@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Page</title>
+
+    <link th:href="@{/css/student.css}" rel="stylesheet">
+</head>
+<body>
+<div class="front">
+    <style>
+        .front{
+            background-color: lightblue;
+            height: 38rem;
+        }
+    </style>
+
+
+
+
+<a th:href="@{create}" class="button">Yeni Telebe Əlavə Et</a>
+<style>
+    /* CSS */
+    .button {
+        background-color: #0583D2;
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 20px;
+        list-style: none;
+        margin-left: 65rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        outline: none;
+        padding: 10px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button:hover,
+    .button:focus {
+        background-color: #F082AC;
+    }
+
+</style>
+
+
+    <table class="styled-table">
+        <thead>
+           <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Soyadi</th>
+            <th>Qrup</th>
+            <th>Ortalamasi</th>
+            <th>Dogum tarixi</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student:${students}">
+            <td th:text="${student.id}">123</td>
+            <td th:text="${student.Name}">test</td>
+            <td th:text="${student.Surname}">test</td>
+            <td th:text="${student.Class_Name}">test</td>
+            <td th:text="${student.Avg}">test</td>
+            <td th:text="${student.Birth_Date}">test</td>
+            <td>
+                <button type="button"><a th:href="@{/edit/{id}(id=${student.id})}">Duzlis Et</a>
+
+                </button>
+                <button type="button"><a th:href="@{/delete/{id}(id=${student.id})}">Sil</a>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>
